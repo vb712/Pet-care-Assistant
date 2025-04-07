@@ -1,0 +1,350 @@
+
+body {
+    opacity: 1;
+    margin: 0;
+    padding: 0;
+   }
+   .di{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("piccc.jpg");
+    background-size: cover;
+    background-position: center center;
+   max-width: 100%; 
+    height: 100vh;
+    background-repeat: no-repeat;
+   }
+   
+.ul{
+position: sticky;
+display: flex;
+flex-wrap: wrap;
+list-style-type: none;
+margin: 0%;
+padding: 0%;
+justify-content: space-evenly;
+align-items: center;
+max-width: 100%;
+/* display: none; */
+}
+#ham{
+display: none;
+}
+.bgcol{
+background-color: rgba(0,0,0,0.7);
+border-radius: 30px;
+position: sticky;
+top: 15px;
+padding: 0.5px;
+width: 50%;
+z-index: 66;
+/* display: none; */
+text-align: center;
+align-items: center;
+justify-content: center;
+left: 50%;
+transform: translateX(-50%);
+}
+
+li{
+ position: sticky;
+display: inline-flex;
+flex-direction: row;
+text-justify: auto;
+z-index: 100;
+padding: 5px;
+font-family: 'Baloo Bhai 2', cursive;
+}
+
+a{
+text-decoration: none;
+color: rgb(59, 121, 59);
+font-size: 1.3rem;
+opacity: 100%;
+font-family: 'Baloo Bhai 2', cursive;
+z-index: 69;
+}
+#home2{
+color:rgb(45, 214, 22) ;
+}
+#home2:hover{
+color:white;
+text-decoration: bold;
+background-color: rgba(0,0,0,0.05);
+font-family: 'Baloo Bhai 2', cursive;
+cursor: pointer;
+}
+a:hover{
+color:white;
+text-decoration: bold;
+background-color: rgba(0,0,0,0.05);
+font-family: 'Baloo Bhai 2', cursive;
+cursor: pointer;
+}
+.heading{
+display: block;
+width: max-content;
+/* margin: 4rem auto; */
+font-size: 2.3rem;
+background-color: #3ee9ff;
+background-size: 100%;
+-webkit-background-clip: text;
+-moz-background-clip: text;
+position: absolute;
+top: 5rem;
+left: 50%;
+transform: translate(-50%);
+-webkit-text-fill-color: transparent; 
+-moz-text-fill-color: transparent;
+background-image: linear-gradient(to top, #aafcff 30%, #4615b8fd 100%);
+text-emphasis: bold;
+
+font-weight: bolder;
+font-family: 'Baloo Bhai 2', cursive;
+text-shadow: rgba(0,0,0,0.7);
+}
+
+.next {
+position: relative;
+display: block;
+position: absolute;
+top: 14.5rem;
+left: 50%;
+transform: translate(-50%);
+color: rgb(245, 255, 249);
+font-size: 1.3rem;
+height: max-content;
+padding: 20px;
+font-family: 'Epilogue', sans-serif;
+line-height: 2rem;
+width: max-content;
+
+}
+.next a{
+color: rgb(245, 205, 205);
+font-family: 'Baloo Bhai 2', cursive;
+cursor: pointer;
+padding: 20px;
+line-height: 2.7rem;
+}
+span{
+color: mediumaquamarine ;
+font-family: 'Baloo Bhai 2', cursive;
+padding: 20px;
+line-height: 2.7rem;
+}
+.next a:hover{
+color: greenyellow;
+font-family: 'Baloo Bhai 2', cursive;
+cursor: pointer;
+background-color: transparent;
+}
+
+.test{
+flex-direction: column;
+word-wrap: break-word;
+}
+/* Add these styles to your existing CSS */
+.hed{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 4rem;
+    margin: 3rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    color: rgb(249, 249, 249);
+}
+.full {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0rem auto;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 25px;
+    margin-top: 20px;
+    color: white;
+}
+
+.chat-container {
+    border: 1px solid #444;
+    border-radius: 20px;
+    height: 450px;
+    overflow-y: auto;
+    margin: auto;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #222;
+}
+
+.message {
+    margin: 10px 0;
+    padding: 8px 12px;
+    border-radius: 18px;
+    max-width: 70%;
+    color: white;
+}
+
+.user-message {
+    background-color: #2a2a72;
+    margin-left: auto;
+    color: white;
+}
+
+.bot-message {
+    background-color: #333;
+    margin-right: auto;
+    color: white;
+}
+
+.input-area {
+    display: flex;
+    gap: 10px;
+}
+
+input, select {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: white;
+}
+
+button {
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+
+#petType {
+    display: block;
+    margin: 10px auto;
+    background-color: #333;
+    color: white;
+    border: 1px solid #444;
+}
+.fl{
+   background-image:url(lllalsl.webp);
+    padding-bottom: 0.5rem;
+    
+     background-size: cover;
+    background-position: center center;
+   max-width: 100%; 
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+
+
+@media only screen and (max-width:727px) {
+body {
+  background-color: lightblue;
+  flex-wrap: wrap;
+  word-wrap: normal;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+}
+.heading{
+    flex-wrap: wrap;
+    font-size: 2rem;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.next{
+    width: 250px;
+    /* margin: 2rem auto; */
+    font-size: 1rem;
+    height: 250px;
+    overflow: hidden;
+}
+.next a{
+    font-size: 1rem;
+    line-height: 10px;
+}
+}
+
+
+@media only screen and (max-width:485px) {
+.heading{
+    font-size: 1.2rem;
+    top: 10rem;
+}
+}
+
+
+@media only screen and (max-width:400px) {
+body {
+  background-color: lightblue;
+  flex-wrap: wrap;
+  word-wrap: normal;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.heading{
+    font-size: 1rem;
+    position: absolute;
+    top: 9rem;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.next{
+    width: 270px;
+    margin: 2rem auto;
+}
+}
+@media only screen and (max-width:375px) {
+.heading{
+    top: 15rem;
+}
+.next{
+    top: 17rem;
+}
+}
+@media only screen and (max-width:317px) {
+.heading{
+    width: 200px;
+    position: absolute;
+    top: 10rem;
+    color: rgb(0, 123, 231);
+    background-image: none;
+    font-size: 1.1rem;
+    
+}
+.next{
+display: block;
+position: absolute;
+} 
+}
+
+
+@media only screen and (max-width:317px) {
+.next{
+width: 200px;
+height: 200px;
+font-size: .9rem;
+}
+}
+
+@media only screen and (max-height:568px) {
+.next{
+height: 190px;
+top: 17rem;
+font-size: .7rem;
+width: 200px;
+}
+.heading{
+font-size: .8rem;
+}
+}

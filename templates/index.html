@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pet Care Chatbot</title>
+    <link rel="stylesheet" href="static/styles.css">
+  </head>
+<body>
+    <div class="di">
+        <!-- Navigation bar -->
+        <div class="bgcol"> 
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars">=</i>
+            </a>
+            <div id="ham">
+                <ul class="ul">
+                    <li class="nav"><a href="#" id="home2">Home</a></li>
+                    <li class="nav"><a href="#" id="home">Pet Care Assistant</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- Heading -->
+        <div class="heading"><h1> Pet Care Assistant</h1> </div>
+        <!-- Content and links and description -->
+        <!-- <div class="next"> Offers pet care advice.<br> -->
+        </div>
+        <!-- <a>See more like this</a> -->
+        <!-- New section  -->
+        <!-- <div class="test"> -->
+            <!-- </div> -->
+        </div>
+        <div class="fl">
+
+            <h1 class="hed">Pet Care Assistant</h1>
+            <select id="petType">
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="bird">Bird</option>
+                <option value="fish">Fish</option>
+                <option value="small mammal">Small Mammal</option>
+                <option value="reptile">Reptile</option>
+            </select>
+            <div class="full">
+                
+                <div id="chatContainer" class="chat-container"></div>
+                
+                <div class="input-area">
+                    <input type="text" id="userInput" placeholder="Ask about pet care...">
+                    <button onclick="sendMessage()">Send</button>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            function myFunction() {
+                var x = document.getElementById("ham");
+                if (x.style.display === "block") {
+                     x.style.display = "none";
+                    } else {
+                           x.style.display = "block";
+                     }
+} 
+        function addMessage(text, sender) {
+            const container = document.getElementById('chatContainer');
+            const message = document.createElement('div');
+            message.className = `message ${sender}-message`;
+            message.textContent = text;
+            container.appendChild(message);
+            container.scrollTop = container.scrollHeight;
+        }
+
+        async function sendMessage() {
+            const input = document.getElementById('userInput');
+            const petType = document.getElementById('petType').value;
+            const message = input.value.trim();
+            
+            if (!message) return;
+            
+            addMessage(message, 'user');
+            input.value = '';
+            
+            try {
+                const response = await fetch('/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message, pet_type: petType })
+                });
+                
+                const data = await response.json();
+                addMessage(data.response, 'bot');
+            } catch (error) {
+                addMessage("Sorry, there was an error connecting to the chatbot.", 'bot');
+            }
+        }
+
+        // Allow sending with Enter key
+        document.getElementById('userInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') sendMessage();
+        });
+    </script>
+</body>
+</html>
