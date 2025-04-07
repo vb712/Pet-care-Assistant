@@ -1,7 +1,7 @@
 import os
 
 class Config:
-    GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY', 'AIzaSyDkHj8vM7-i8AhZ2TmoQNWroQh0alF5K1Y')
+    GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY', 'ENTER_API_KEY')
     SYSTEM_PROMPT = """
     You are Dr. PetBot, an AI assistant specialized in pet care advice. 
     Your responses must follow these rules:
